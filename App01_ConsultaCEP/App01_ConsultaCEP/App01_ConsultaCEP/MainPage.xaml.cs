@@ -1,4 +1,5 @@
-﻿using App01_ConsultaCEP.Service;
+﻿using App01_ConsultaCEP.Model;
+using App01_ConsultaCEP.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace App01_ConsultaCEP.Service
+namespace App01_ConsultaCEP.Model
 {
     class Endereco
     {
