@@ -4,6 +4,12 @@
              x:Class="App02_TiposPaginasXF.TiposPaginas.Navigation.Modal">
     <ContentPage.Content>
         <StackLayout>
+
+            <StackLayout BackgroundColor="LightSkyBlue" HeightRequest="250">
+                <Label Text="Eu sou o titulo" />
+                <Button Text="X" Clicked="FecharModal"/>
+            </StackLayout>
+            
             <Label Text="Eu sou um modal"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
