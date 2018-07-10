@@ -27,6 +27,11 @@ namespace App02_TiposPaginasXF.TiposPaginas.Navigation
             Navigation.PushModalAsync(new Modal());
         }
 
+        private void ChamarMaster(object sender, EventArgs args)
+        {
+            App.Current.MainPage = new Master.Master();
+        }
+
 
     }
 }
