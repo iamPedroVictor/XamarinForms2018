@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using App01_ConsultaCEP.Model;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace App01_ConsultaCEP.Service
 {
@@ -15,14 +17,23 @@ namespace App01_ConsultaCEP.Service
         {
             string NovaURL = string.Format(EnderecoURL, cep);
 
-            WebClient wc = new WebClient();
-            string conteudo = wc.DownloadString(NovaURL);
+            Endereco end;
+            string result;
 
-            Endereco end = JsonConvert.DeserializeObject<Endereco>(conteudo);
+            result =  SicronoCEP(NovaURL);
+
+            end = JsonConvert.DeserializeObject<Endereco>(result);
 
             if (end.cep == null) return null;
 
             return end;
+        }
+
+        private static string SicronoCEP(string uri)
+        {
+            WebClient wc = new WebClient();
+            string conteudoJson = wc.DownloadString(uri);
+            return conteudoJson;
         }
 
     }
