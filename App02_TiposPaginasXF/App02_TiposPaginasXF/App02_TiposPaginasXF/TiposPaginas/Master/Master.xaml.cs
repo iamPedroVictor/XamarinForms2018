@@ -19,7 +19,7 @@ namespace App02_TiposPaginasXF.TiposPaginas.Master
 
         private void MudarPagina1(object sender, EventArgs args)
         {
-            Detail = new Navigation.Pagina1();
+            Detail = new NavigationPage(new Navigation.Pagina1());
         }
         private void MudarPagina2(object sender, EventArgs args)
         {
